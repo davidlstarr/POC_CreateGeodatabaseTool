@@ -1,0 +1,22 @@
+{
+    "DB_NAME": "PortofClevelandMaster_TEST",
+    "DATASETS":{
+        "Address": "C:\\Users\\dstarr\\Documents\\ArcGIS\\Projects\\PortofCleveland\\PortofClevelandMaster_TEST.gdb\\Address",
+        "CapitalProjects": "C:\\Users\\dstarr\\Documents\\ArcGIS\\Projects\\PortofCleveland\\PortofClevelandMaster_TEST.gdb\\CapitalProjects",
+        "Elevation": "C:\\Users\\dstarr\\Documents\\ArcGIS\\Projects\\PortofCleveland\\PortofClevelandMaster_TEST.gdb\\Elevation",
+        "ErosionControl": "C:\\Users\\dstarr\\Documents\\ArcGIS\\Projects\\PortofCleveland\\PortofClevelandMaster_TEST.gdb\\ErosionControl"
+    },
+    "FEATURE_CLASSES":{
+        "AddressPoint": "C:\\Users\\dstarr\\Documents\\ArcGIS\\Projects\\PortofCleveland\\PortofClevelandMaster_TEST.gdb\\AddressPoint",
+        "CapitalProjectsLimits": "C:\\Users\\dstarr\\Documents\\ArcGIS\\Projects\\PortofCleveland\\PortofClevelandMaster_TEST.gdb\\CapitalProjectsLimits1",
+        "TwoFootContours": "C:\\Users\\dstarr\\Documents\\ArcGIS\\Projects\\PortofCleveland\\PortofClevelandMaster_TEST.gdb\\TwoFootContours",
+        "ErosionControlLine": "C:\\Users\\dstarr\\Documents\\ArcGIS\\Projects\\PortofCleveland\\PortofClevelandMaster_TEST.gdb\\ErosionControlLine"
+    },
+     "GEOMETRY":{
+        "Point": "POINT",
+        "Polygon": "POLYGON",
+        "Polyline": "POLYLINE",
+        "Polyline1": "POLYLINE"
+     },
+    "FC_TEMPLATE": "C:\\Users\\dstarr\\Documents\\ArcGIS\\Projects\\PortofCleveland\\PortofCleveland.gdb\\TemplateFC"
+}
