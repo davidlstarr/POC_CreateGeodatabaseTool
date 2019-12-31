@@ -108,7 +108,12 @@ for fc_array_layers, geometry_array_list, existingfc_array in zip(featureClass_a
         if '_1' in field2:
             fieldRemoveList.append(field2)
 
-    arcpy.DeleteField_management(in_table=fc, drop_field=fieldRemoveList)
+    if len(fieldRemoveList) != 0:
+        arcpy.AddMessage(fieldRemoveList)
+        arcpy.DeleteField_management(in_table=fc, drop_field=fieldRemoveList)
+    else:
+        message = fc_array_layers + " -- does not contain duplicate fields."
+        arcpy.AddMessage(message)
 
 
 
