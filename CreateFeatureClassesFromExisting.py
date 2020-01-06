@@ -92,7 +92,27 @@ for fc_array_layers, geometry_array_list, existingfc_array in zip(featureClass_a
         message = fc_array_layers + " -- does not contain duplicate fields."
         arcpy.AddMessage(message)
 
-
+    #Uppercase all aliases and remove duplicate DATASOURCE field
+    arcpy.AddMessage("Text to uppercase all aliases in feature class and remove duplicate DATASOURCE field.")
+    for field3 in fieldObjList:
+        if not field3.required:
+            try:
+                if field3.name == "DATASOURCE":
+                    # Remove duplicate DATASOURCE field
+                    arcpy.AddMessage("Remove duplicate DATASOURCE field")
+                    arcpy.DeleteField_management(in_table=fc, drop_field="DATASOURCE")
+                if field3.name != "" or field3.aliasName != "":
+                    arcpy.AddMessage(str(field3.name).upper())
+                    arcpy.AlterField_management(fc, field3.name, str(field3.name).upper() + "_2",
+                                                str(field3.aliasName).upper())
+                    arcpy.AlterField_management(fc, field3.name + "_2", str(field3.name).upper(),
+                                                str(field3.aliasName).upper())
+                    arcpy.AlterField_management(fc, field3.name, str(field3.name).upper(),
+                                                str(field3.aliasName).upper())
+                    arcpy.AddMessage("\tUpdated {0}".format(field3.name))
+            except:
+                arcpy.AddMessage("\tUnable to update {0}".format(field3.name))
+                pass
 
 
 
